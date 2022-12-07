@@ -222,10 +222,6 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-image: linear-gradient(red, orange);
-  }
-
   .page {
     display: block;
   }
