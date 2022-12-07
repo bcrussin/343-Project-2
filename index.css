@@ -27,6 +27,7 @@ nav {
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 nav .current {
@@ -72,6 +73,7 @@ main {
   -o-border-radius: 8px;
   box-shadow: 5px 5px 10px #00000030;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   overflow-y: auto;
 }
 
@@ -229,5 +231,13 @@ main {
   #calendar-section {
     min-width: none;
     max-width: 100%;
+  }
+
+  #week {
+    font-size: 10pt;
+  }
+
+  .date {
+    font-size: 10pt;
   }
 }
