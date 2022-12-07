@@ -231,6 +231,7 @@ main {
   }
 
   #calendar-section {
+    min-width: none;
     max-width: 100%;
   }
 }
