@@ -227,7 +227,7 @@ main {
   }
 
   .page {
-    flex-direction: column;
+    display: block;
   }
 
   #calendar-section {
