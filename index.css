@@ -1,0 +1,236 @@
+body {
+  background-image: url("/images/weights_bkg.jpg");
+  background-size: 100%, 100%;
+  /*background-color: burlywood;*/
+  overflow-y: hidden;
+  font-family: "Kanit", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.navbar {
+  text-align: center;
+  background-color: #1b222aa0;
+  color: whitesmoke;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1.2vw;
+  padding-right: 1.2vw;
+  border-radius: 100px;
+  font-size: clamp(10pt, 1.6vw, 24pt);
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  backdrop-filter: blur(10px);
+}
+
+nav .current {
+  text-decoration: underline;
+}
+
+nav a {
+  cursor: pointer;
+}
+
+nav #workouts-nav {
+  border-right: 2px solid whitesmoke;
+  padding-left: 4px;
+  padding-right: 10px;
+}
+
+nav #stats-nav {
+  padding-right: 4px;
+  padding-left: 10px;
+}
+
+/* ___ MAIN ___ */
+
+main {
+  display: flex;
+}
+
+.page {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.section {
+  margin: 15px;
+  background-color: #1b222aa0;
+  border-radius: 8px;
+  color: whitesmoke;
+  padding: 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 5px 5px 10px #00000030;
+  backdrop-filter: blur(10px);
+  overflow-y: auto;
+}
+
+#stats-page {
+  display: none;
+}
+
+/* ___ CALENDAR ___ */
+
+#calendar-section {
+  flex: 3;
+  text-align: center;
+  min-width: 200px;
+  max-width: 400px;
+  height: fit-content;
+}
+
+#calendar-header {
+  text-align: center;
+  font-size: auto;
+  width: 100%;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.calendar-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#week {
+  color: #b7b9c3;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 14pt;
+}
+
+#days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.date {
+  aspect-ratio: 1;
+  margin: 10%;
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 14pt;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: background-color 0.1s;
+  -webkit-transition: background-color 0.1s;
+  -moz-transition: background-color 0.1s;
+  -ms-transition: background-color 0.1s;
+  -o-transition: background-color 0.1s;
+}
+
+.date:hover {
+  background-color: #b7b9c320;
+}
+
+#current-date {
+  background-color: rgb(135, 206, 235, 0.9);
+  color: black;
+}
+
+/* ___ WORKOUT ___ */
+#workout-section {
+  padding-left: 30px;
+  padding-right: 30px;
+  flex: 4;
+}
+
+#workout-section h1 {
+  margin: 0;
+  font-weight: 200;
+}
+
+.exercises {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.workout h2 {
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.exercise {
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  opacity: 1;
+}
+
+.icon-button {
+  width: 15px;
+  height: auto;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  font-size: 100%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.exercise h3 {
+  margin: 0;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.sets {
+  border-top: 2px solid #ffffff40;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-auto-flow: column;
+  column-gap: 40px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.set {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-left: 10px;
+  opacity: 0.5;
+  margin: 0;
+  font-weight: 300;
+}
+
+.set > * {
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: linear-gradient(red, orange);
+  }
+
+  .page {
+    flex-direction: column;
+  }
+
+  #calendar-section {
+    max-width: 100%;
+  }
+}
